@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pvcarmezi": {
+      "hosting": {
+        "app": [
+          "pvcarmezi"
+        ]
+      }
+    }
+  }
+}
