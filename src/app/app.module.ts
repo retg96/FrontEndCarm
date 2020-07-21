@@ -17,6 +17,11 @@ import { AngularFireModule } from "@angular/fire";            //Modulo para inic
 import { environment } from 'src/environments/environment';
 import { GooglePlus } from "@ionic-native/google-plus/ngx";
 
+//
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -26,6 +31,8 @@ import { GooglePlus } from "@ionic-native/google-plus/ngx";
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    FormsModule,
+    HttpClientModule,
     AngularFireAuthModule],
   providers: [
     GooglePlus,

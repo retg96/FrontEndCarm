@@ -1,10 +1,10 @@
-.icon{
-    max-width: 32vh;
+.logo{
+    max-width: 150vh !important;
     display: block;
     margin: 0 auto;
 }
 
-ion-input, ion-item{
+ion-input{
     --background: transparent;
 }
 ion-content{
@@ -15,6 +15,53 @@ ion-content{
     color: #cf3c4f;
 }
 
+// ion-input {
+//   --placeholder-color: black;     /* placeholder text color */
+//   color: var(--ion-color-primary); /* input text color to primary */
+// }
+
+.closed {
+  color:#666;
+  --highlight-background: transparent;
+}
+
 .google{
     --background: #db4437;
+    // max-width: 200px;
+    // margin: 0 auto;
+    display: inline-block;
+    justify-content: space-between;
 }
+
+.apple{
+  // max-width: 200px;
+  // margin: 0 auto;
+  display: inline-block;
+  justify-content: space-between;
+}
+
+
+
+// .header {
+//   position:relative;
+//   text-align:center;
+//   background: #000000;
+//   color:white;
+// }
+// .logo {
+//   width:50px;
+//   fill:white;
+//   padding-right:15px;
+//   display:inline-block;
+//   vertical-align: middle;
+// }
+
+// .inner-header {
+//   height:18vh;
+//   width:100%;
+//   margin: 0;
+//   padding: 0;
+// }
+
+
+

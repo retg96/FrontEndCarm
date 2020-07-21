@@ -12,6 +12,8 @@ export class LoginPage implements OnInit {
   email: string;
   password: string;
 
+  signupView: boolean = false
+
   constructor(private authService: AuthService, public router: Router) { }
 
   ngOnInit() {
@@ -32,5 +34,9 @@ export class LoginPage implements OnInit {
     }).catch(err => {
       alert('Algo salio mal, contacta a sporte');
     })
+  }
+
+  toggleSignUpView () {
+    this.signupView = !this.signupView
   }
 }
