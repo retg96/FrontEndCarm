@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
 import { Router } from '@angular/router';
@@ -13,6 +13,14 @@ export class HomePage {
   email: string;
   password: string;
   constructor(private menu: MenuController, private authService: AuthService, public router: Router) {}
+
+  ngOnInit() {
+  }
+
+  toggleMenu(){
+    this.menu.toggle();
+  }
+
 
   openFirst() {
     this.menu.enable(true, 'first');

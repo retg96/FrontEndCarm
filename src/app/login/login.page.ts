@@ -19,6 +19,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+
   doLogin()
   {
     this.authService.login(this.email, this.password).then( () =>{
@@ -39,4 +40,5 @@ export class LoginPage implements OnInit {
   toggleSignUpView () {
     this.signupView = !this.signupView
   }
+
 }

@@ -20,6 +20,7 @@ import { GooglePlus } from "@ionic-native/google-plus/ngx";
 //
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { ComponentsModule } from './components/components.module';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import {HttpClientModule} from '@angular/common/http';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    ComponentsModule,
     FormsModule,
     HttpClientModule,
     AngularFireAuthModule],
