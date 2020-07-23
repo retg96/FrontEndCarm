@@ -13,18 +13,36 @@
     <div class="login-container">
 
       <ion-list lines="none" class="form fade-in">
-        <form autocomplete="off" (submit)="doLogin()">
+        <!-- <form autocomplete="off" (submit)="doLogin()"> -->
+          <form [formGroup]="registrationForm" (submit)="doLogin()">
         <ion-item>
-          <ion-label></ion-label>
-          <ion-input type="text" class="ion-text-left" placeholder="Email" [(ngModel)]="email" name="email" required="true"></ion-input>
-          <ion-icon slot="start" name="at"></ion-icon>
+            <ion-label></ion-label>
+            <!-- <ion-input type="text" class="ion-text-left" placeholder="Email" [(ngModel)]="email" name="email" required="true"></ion-input> -->
+            <ion-input type="text" formControlName="email" class="ion-text-left" placeholder="Email" name="email"></ion-input>
+            <ion-icon slot="start" name="at"></ion-icon>
         </ion-item>
+
+        <div *ngFor="let error of errorMessages.email">
+          <ng-container *ngIf="email.hasError(error.type) && (email.dirty || email.touched)">
+            <small class="error-message">{{error.message}}</small>
+          </ng-container>
+        </div>
+
         <ion-item>
           <ion-label></ion-label>
-          <ion-input [(ngModel)]="password" type="password" name="password" required="true" class="ion-text-left" placeholder="Password"></ion-input>
+          <!-- <ion-input [(ngModel)]="password" type="password" name="password" required="true" class="ion-text-left" placeholder="Password"></ion-input> -->
+          <ion-input formControlName="password" type="password" name="password" required="true" class="ion-text-left" placeholder="Password"></ion-input>
           <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
         </ion-item>
-        <ion-button type="submit" class="green-button" expand="block">
+
+        <div *ngFor="let error of errorMessages.password">
+          <ng-container *ngIf="password.hasError(error.type) && (password.dirty || password.touched)">
+            <small class="error-message">{{error.message}}</small>
+          </ng-container>
+        </div>
+
+
+        <ion-button [disabled]="!registrationForm.valid"  type="submit" class="green-button"  name="create" expand="block">
           Login
         </ion-button>
         <!-- <ion-button class="google" (click)="loginGoogle()" size="small">
@@ -62,24 +80,50 @@
       </div>
 
       <ion-list lines="none" class="form" [ngClass]="{'fade-in': signupView, 'fade-out': !signupView}">
+        <form [formGroup]="registrationForm" (submit)="submit()">
         <ion-item>
           <ion-label></ion-label>
           <ion-input class="ion-text-left" placeholder="User Name"></ion-input>
           <ion-icon slot="end" name="person"></ion-icon>
         </ion-item>
+<!-- 
+        <div *ngFor="let error of errorMessages.username">
+          <ng-container *ngIf="username.hasError(error.type) && (username.dirty || username.touched)">
+            <small class="error-message">{{error.message}}</small>
+          </ng-container>
+        </div> -->
+
         <ion-item>
           <ion-label></ion-label>
-          <ion-input class="ion-text-left" placeholder="Email"></ion-input>
+          <ion-input class="ion-text-left" formControlName="email" placeholder="Email"></ion-input>
           <ion-icon slot="end" name="at"></ion-icon>
         </ion-item>
+
+        <div *ngFor="let error of errorMessages.email">
+          <ng-container *ngIf="email.hasError(error.type) && (email.dirty || email.touched)">
+            <small class="error-message">{{error.message}}</small>
+          </ng-container>
+        </div>
+
         <ion-item>
           <ion-label></ion-label>
-          <ion-input class="ion-text-left" placeholder="Password"></ion-input>
+          <ion-input class="ion-text-left" formControlName="password" placeholder="Password"></ion-input>
           <ion-icon slot="end" name="lock-closed-outline"></ion-icon>
         </ion-item>
-        <ion-button class="gray-button" expand="block">
+
+        <div *ngFor="let error of errorMessages.password">
+          <ng-container *ngIf="password.hasError(error.type) && (password.dirty || password.touched)">
+            <small class="error-message">{{error.message}}</small>
+          </ng-container>
+        </div>
+
+        <!-- <ion-button class="gray-button" expand="block">
+          Login
+        </ion-button> -->
+        <ion-button [disabled]="!registrationForm.valid"  type="submit" class="gray-button" expand="block"  name="create">
           Login
         </ion-button>
+      </form>
       </ion-list>
 <!--       
       <div class="ion-text-center" [ngClass]="{'fade-in': signupView, 'fade-out': !signupView}">
