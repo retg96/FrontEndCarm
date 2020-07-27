@@ -68,43 +68,7 @@ const routes: Routes = [
   { path: 'home9', loadChildren: './home-pages/home9/home9.module#Home9PageModule' },
   { path: 'home10', loadChildren: './home-pages/home10/home10.module#Home10PageModule' },
   { path: 'color-theme', loadChildren: './color-theme/color-theme.module#ColorThemePageModule' },
-  { path: 'blank-modal', loadChildren: './blank-modal/blank-modal.module#BlankModalPageModule' },  {
-    path: 'color-theme',
-    loadChildren: () => import('./color-theme/color-theme/color-theme.module').then( m => m.ColorThemePageModule)
-  },
-  {
-    path: 'contact-us',
-    loadChildren: () => import('./contact-us/contact-us/contact-us.module').then( m => m.ContactUsPageModule)
-  },
-  {
-    path: 'currency-list',
-    loadChildren: () => import('./currency-list/currency-list/currency-list.module').then( m => m.CurrencyListPageModule)
-  },
-  {
-    path: 'downloads',
-    loadChildren: () => import('./downloads/downloads/downloads.module').then( m => m.DownloadsPageModule)
-  },
-  {
-    path: 'forgot-password',
-    loadChildren: () => import('./forgot-password/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
-  },
-  {
-    path: 'language',
-    loadChildren: () => import('./lnguage/language/language.module').then( m => m.LanguagePageModule)
-  },
-  {
-    path: 'list',
-    loadChildren: () => import('./list/list/list.module').then( m => m.ListPageModule)
-  },
-  {
-    path: 'login',
-    loadChildren: () => import('./login/login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'my-account',
-    loadChildren: () => import('./my-account/my-account/my-account.module').then( m => m.MyAccountPageModule)
-  }
-
+  { path: 'blank-modal', loadChildren: './blank-modal/blank-modal.module#BlankModalPageModule' }
 ];
 
 @NgModule({
