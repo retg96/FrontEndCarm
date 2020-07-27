@@ -5,12 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 import { TranslateModule } from '@ngx-translate/core';
-// import { ShareModule } from '../../components/share/share.module'; 
-
-// import { Home5PageRoutingModule } from './home5-routing.module';
-
+import { ShareModule } from '../../../components/share/share.module'; 
 import { Home5Page } from './home5.page';
-import { ShareModule } from 'src/components/share/share.module';
 
 const routes: Routes = [
   {

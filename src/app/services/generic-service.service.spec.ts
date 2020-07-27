@@ -3,14 +3,10 @@ import { TestBed } from '@angular/core/testing';
 import { GenericServiceService } from './generic-service.service';
 
 describe('GenericServiceService', () => {
-  let service: GenericServiceService;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(GenericServiceService);
-  });
+  beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
+    const service: GenericServiceService = TestBed.get(GenericServiceService);
     expect(service).toBeTruthy();
   });
 });

@@ -7,9 +7,8 @@ import { NavController, MenuController } from '@ionic/angular';
   styleUrls: ['./home5.page.scss'],
 })
 export class Home5Page implements OnInit {
-
-//for categories
-public items = [
+ //for categories
+ public items = [
   { name: "Tops", img: "assets/images/home-categories/1.jpg", count: "2" },
   { name: "Bottoms", img: "assets/images/home-categories/2.jpg", count: "3" },
   { name: "Shirts", img: "assets/images/home-categories/3.jpg", count: "2" },

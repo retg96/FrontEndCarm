@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+
 import { NavController, MenuController } from '@ionic/angular';
-import { CustomThemeService } from '../../services/custom-theme.service';
 import { SharedDataService } from 'src/providers/shared-data/shared-data.service';
 import { ConfigService } from 'src/providers/config/config.service';
-
+import { CustomThemeService } from '../../services/custom-theme.service';
 @Component({
   selector: 'app-home3',
   templateUrl: './home3.page.html',
   styleUrls: ['./home3.page.scss'],
 })
 export class Home3Page implements OnInit {
-
   scrollTopButton = false;//for scroll down fab 
   public itemColor = [];
   public iconColorVar = "";

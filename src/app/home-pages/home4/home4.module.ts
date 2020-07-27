@@ -3,15 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
-
 import { IonicModule } from '@ionic/angular';
 import { TranslateModule } from '@ngx-translate/core';
-// import { ShareModule } from '../../../components/share/share.module'; 
-
-
-
-// import { Home4PageRoutingModule } from './home4-routing.module';
-
+import { ShareModule } from '../../../components/share/share.module'; 
 import { Home4Page } from './home4.page';
 
 const routes: Routes = [
@@ -28,7 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
     TranslateModule,
-    // ShareModule
+    ShareModule
   ],
   declarations: [Home4Page]
 })

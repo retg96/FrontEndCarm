@@ -1,16 +1,16 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ToastController, MenuController} from '@ionic/angular';
+import { ToastController, MenuController, Events } from '@ionic/angular';
 import { trigger, style, animate, transition } from '@angular/animations';//animation packages
 import { NavController, IonContent } from '@ionic/angular';
-import { CustomThemeService } from '../../services/custom-theme.service';
-import { SharedDataService } from 'src/providers/shared-data/shared-data.service';
-import { ConfigService } from 'src/providers/config/config.service';
+import { ConfigService } from '../../../providers/config/config.service'
+import { SharedDataService } from '../../../providers/shared-data/shared-data.service'
+import { CustomThemeService } from 'src/app/services/custom-theme.service';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
 export class HomePage {
   @ViewChild(IonContent, { static: false }) content: IonContent;
@@ -35,7 +35,7 @@ export class HomePage {
   ]
   constructor(public menuCtrl: MenuController, public toastController: ToastController,
     public nav: NavController, public config: ConfigService, public shared: SharedDataService,
-    private service: CustomThemeService,
+    private events: Events, private service: CustomThemeService,
     public theme: ThemeService) {
     setTimeout(() => {
       this.tab1 = [
@@ -80,5 +80,4 @@ export class HomePage {
   goToSearchPage() {
     this.nav.navigateForward("search");
   }
-
 }

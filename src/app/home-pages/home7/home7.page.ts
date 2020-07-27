@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonContent, NavController, IonCardContent, MenuController } from '@ionic/angular';
-import { CustomThemeService } from '../../services/custom-theme.service';
 import { SharedDataService } from 'src/providers/shared-data/shared-data.service';
 import { ConfigService } from 'src/providers/config/config.service';
+import { CustomThemeService } from '../../services/custom-theme.service';
 
 @Component({
   selector: 'app-home7',
@@ -10,7 +10,6 @@ import { ConfigService } from 'src/providers/config/config.service';
   styleUrls: ['./home7.page.scss'],
 })
 export class Home7Page implements OnInit {
-
   @ViewChild(IonContent, { static: false }) content: IonContent;
   scrollTopButton = false;//for scroll down fab 
   segments = "topSeller"//first segment by default
@@ -129,5 +128,4 @@ export class Home7Page implements OnInit {
   goToCartPage() {
     this.nav.navigateForward("cart");
   }
-
 }

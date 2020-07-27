@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController, NavController, MenuController } from '@ionic/angular';
-// import { SharedDataService } from 'src/providers/shared-data/shared-data.service';
-// import { ConfigService } from 'src/providers/config/config.service';
-import { CustomThemeService } from '../../services/custom-theme.service';
 import { SharedDataService } from 'src/providers/shared-data/shared-data.service';
 import { ConfigService } from 'src/providers/config/config.service';
-
+import { CustomThemeService } from '../../services/custom-theme.service';
 
 
 @Component({
@@ -83,5 +80,4 @@ export class Home10Page implements OnInit {
   goToCartPage() {
     this.nav.navigateForward("cart");
   }
-
 }

@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+
 import { NavController, MenuController } from '@ionic/angular';
-import { CustomThemeService } from '../../services/custom-theme.service';
 import { SharedDataService } from 'src/providers/shared-data/shared-data.service';
 import { ConfigService } from 'src/providers/config/config.service';
-
+import { CustomThemeService } from '../../services/custom-theme.service';
 @Component({
   selector: 'app-home4',
   templateUrl: './home4.page.html',
   styleUrls: ['./home4.page.scss'],
 })
 export class Home4Page implements OnInit {
-
- //for product slider after banner
+//for product slider after banner
 sliderConfig = {
   slidesPerView: 2.5,
   spaceBetween: 0
@@ -105,5 +104,4 @@ data: any;
   goToSubCategory(){
     this.nav.navigateForward("products");
   }
-
 }

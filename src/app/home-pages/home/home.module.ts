@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
 import { Routes, RouterModule } from '@angular/router';
 
-// import { HomePageRoutingModule } from './home-routing.module';
+import { IonicModule } from '@ionic/angular';
 import { TranslateModule } from '@ngx-translate/core';
-// import { ShareModule } from '../../../components/share/share.module'; 
-
+import { ShareModule } from '../../../components/share/share.module'; 
+import { HomePage } from './home.page';
 
 const routes: Routes = [
   {
@@ -19,7 +17,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    // ShareModule,
+    ShareModule,
     CommonModule,
     FormsModule,
     IonicModule,
@@ -29,4 +27,3 @@ const routes: Routes = [
   declarations: [HomePage]
 })
 export class HomePageModule {}
-

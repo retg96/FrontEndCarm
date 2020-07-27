@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-import { IonicModule } from '@ionic/angular';
 import { Routes, RouterModule } from '@angular/router';
 
-// import { Home3PageRoutingModule } from './home3-routing.module';
+import { IonicModule } from '@ionic/angular';
 import { TranslateModule } from '@ngx-translate/core';
-// import { ShareModule } from '../../../components/share/share.module'; 
+import { ShareModule } from '../../../components/share/share.module'; 
 import { Home3Page } from './home3.page';
-
 
 const routes: Routes = [
   {
@@ -25,7 +22,7 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
     TranslateModule,
-    // ShareModule
+    ShareModule
   ],
   declarations: [Home3Page]
 })

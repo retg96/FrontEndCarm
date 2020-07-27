@@ -3,11 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
-
 import { IonicModule } from '@ionic/angular';
 import { TranslateModule } from '@ngx-translate/core';
-import { ShareModule } from 'src/components/share/share.module';
-
+import { ShareModule } from '../../../components/share/share.module'; 
 import { Home6Page } from './home6.page';
 
 const routes: Routes = [
