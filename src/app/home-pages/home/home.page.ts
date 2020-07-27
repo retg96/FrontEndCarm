@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ToastController, MenuController, Events } from '@ionic/angular';
+import { ToastController, MenuController} from '@ionic/angular';
 import { trigger, style, animate, transition } from '@angular/animations';//animation packages
 import { NavController, IonContent } from '@ionic/angular';
 import { CustomThemeService } from '../../services/custom-theme.service';
@@ -35,7 +35,7 @@ export class HomePage {
   ]
   constructor(public menuCtrl: MenuController, public toastController: ToastController,
     public nav: NavController, public config: ConfigService, public shared: SharedDataService,
-    private events: Events, private service: CustomThemeService,
+    private service: CustomThemeService,
     public theme: ThemeService) {
     setTimeout(() => {
       this.tab1 = [
