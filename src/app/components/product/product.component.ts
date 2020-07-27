@@ -1,8 +1,10 @@
 import { Component, OnInit, Input, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { ToastController, NavController, Events } from '@ionic/angular';
-import { GenericServiceService } from '../../app/services/generic-service.service';
+import { ToastController, NavController} from '@ionic/angular';
+// import { ToastController, NavController, Events } from '@ionic/angular';
+// import { GenericServiceService } from '../../app/services/generic-service.service';
 import { CustomThemeService } from 'src/app/services/custom-theme.service';
+import { GenericServiceService } from 'src/app/services/generic-service.service';
 
 @Component({
   selector: 'app-product',
@@ -22,7 +24,7 @@ export class ProductComponent implements OnInit {
 
   constructor(public translate: TranslateService, public toastController: ToastController, public renderer: Renderer2,
     public nav: NavController, public gService: GenericServiceService,
-    private events: Events, private service: CustomThemeService) {
+    private service: CustomThemeService) {
     console.log("Call Call Product");
 
     this.itemColor = ["black"];//to get the coloe from custom-theme service
