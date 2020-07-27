@@ -3,8 +3,8 @@ import { ToastController, MenuController} from '@ionic/angular';
 import { trigger, style, animate, transition } from '@angular/animations';//animation packages
 import { NavController, IonContent } from '@ionic/angular';
 import { CustomThemeService } from '../../services/custom-theme.service';
-import { SharedDataService } from 'src/app/providers/shared-data/shared-data.service';
-import { ConfigService } from 'src/app/providers/config/config.service';
+import { SharedDataService } from 'src/providers/shared-data/shared-data.service';
+import { ConfigService } from 'src/providers/config/config.service';
 import { ThemeService } from 'src/app/services/theme.service';
 
 @Component({

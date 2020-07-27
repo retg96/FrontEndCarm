@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ToastController, NavController, MenuController, IonContent } from '@ionic/angular';
 import { CustomThemeService } from '../../services/custom-theme.service';
-import { SharedDataService } from 'src/app/providers/shared-data/shared-data.service';
-import { ConfigService } from 'src/app/providers/config/config.service';
+import { SharedDataService } from 'src/providers/shared-data/shared-data.service';
+import { ConfigService } from 'src/providers/config/config.service';
 
 
 @Component({

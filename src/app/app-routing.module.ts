@@ -98,6 +98,10 @@ const routes: Routes = [
   {
     path: 'home10',
     loadChildren: () => import('./home-pages/home10/home10.module').then( m => m.Home10PageModule)
+  },
+  {
+    path: 'about-us',
+    loadChildren: () => import('./app/about-us/about-us/about-us.module').then( m => m.AboutUsPageModule)
   }
 
 ];

@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 import { TranslateModule } from '@ngx-translate/core';
-import { ShareModule } from '../../components/share/share.module'; 
+import { ShareModule } from 'src/components/share/share.module';
 
 import { Home6Page } from './home6.page';
 
